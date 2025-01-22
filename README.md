@@ -2,6 +2,8 @@
 
 ## Steps to run application
 
+### Design pattern used- Modular Monolith
+
 ### Step-1 RUN
 
 - Run "npm install" to install the required Node packages.
