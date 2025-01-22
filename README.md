@@ -8,7 +8,7 @@
 
 - Run "npm install" to install the required Node packages.
 
-### Step-2 Requirements
+### Step-2 Database Requirements
 
 - Ensure the MySQL local server is installed. For a more visually effective way to view database records, install Workbench if needed for testing purposes.
 - Update the database credentials accordingly in the ".env" file within your Node application (dotenv configuration) for testing.
