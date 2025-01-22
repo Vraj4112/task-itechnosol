@@ -8,7 +8,7 @@
 
 ### Step-2 Requirements
 
-- MySQL local server must be installed. Additionally, install Workbench if needed for testing purposes.
+- Ensure the MySQL local server is installed. For a more visually effective way to view database records, install Workbench if needed for testing purposes.
 - Update the database credentials accordingly in the ".env" file within your Node application (dotenv configuration) for testing.
 - This will automatically generate the schema task_management_dB in your MySQL database when you run the Node server application (execute the script npm start).
 
