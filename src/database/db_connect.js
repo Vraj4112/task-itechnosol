@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const sequelize = new Sequelize(
-  process.env.DATABASE || "task_management",
+  process.env.DATABASE || "task_management_dB",
   process.env.DB_USER || "root",
   process.env.DB_PASSWORD || "123456",
   {
@@ -21,7 +21,7 @@ const sequelize = new Sequelize(
     },
   }
 );
-// -- just creating task_management schema in mysql local database
+// -- just creating task_management_dB schema in mysql local database
 var mysql = require("mysql2/promise");
 let localConfig = {
   host: process.env.DB_HOST || "localhost",
@@ -34,13 +34,14 @@ let localConfig = {
 };
 let connectSqlDb = async function () {
   console.log("---DB connecting:---");
-  const schema_query_string = "CREATE DATABASE IF NOT EXISTS `task_management`";
+  const schema_query_string =
+    "CREATE DATABASE IF NOT EXISTS `task_management_dB`";
   try {
     let sqlConnect = await mysql.createConnection(localConfig);
     console.log("Connected as id " + sqlConnect.threadId);
     const [results, fields] = await sqlConnect.execute(schema_query_string);
     if (results) {
-      console.log("Schema 'task_management' created or already exists.");
+      console.log("Schema 'task_management_dB' created or already exists.");
     }
     await sqlConnect.end();
   } catch (err) {
