@@ -16,4 +16,4 @@
 
 ### Step-3 post man collection
 
-- I've also included the Postman collection in this repository under the file name "Task management System.postman_collection.json", which you can use as well.
+- I've also included the Postman collection in this repository under the file name "Task management System.postman_collection.json", which you can import and use as well.
