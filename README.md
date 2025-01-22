@@ -4,13 +4,13 @@
 
 ### Step-1 RUN
 
-- run "npm install" to install node packages
+- Run npm install to install the required Node packages.
 
 ### Step-2 Requirements
 
-- MySQL local sever to be installed. and also Workbench for testing purpose
-- change database credentials In accordingly In node application inside .env file (dotenv) configuration for testing
-- also this will auto generate schema "task_management_dB" in MySql database, when you run Node server application(run the sript "npm start")
+- MySQL local server must be installed. Additionally, install Workbench if needed for testing purposes.
+- Update the database credentials accordingly in the .env file within your Node application (dotenv configuration) for testing.
+- This will automatically generate the schema task_management_dB in your MySQL database when you run the Node server application (execute the script npm start).
 
 ### Step-3 post man collection
 
