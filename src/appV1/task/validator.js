@@ -10,7 +10,13 @@ const validateTaskCreation = (req, res, next) => {
 
   const { error } = schema.validate(req.body);
   if (error) {
-    return res.status(400).json({ error: error.details[0].message });
+    return res.status(400).json({
+      error: "Invalid data in request json.",
+      message: error.details.map((obj) => {
+        let key = obj.path[0];
+        return { [key]: obj.message.replace(/"/g, "") };
+      }),
+    });
   }
   next();
 };
@@ -22,7 +28,13 @@ const validateTaskId = (req, res, next) => {
 
   const { error } = schema.validate(req.params);
   if (error) {
-    return res.status(400).json({ error: error.details[0].message });
+    return res.status(400).json({
+      error: "Invalid data in request json.",
+      message: error.details.map((obj) => {
+        let key = obj.path[0];
+        return { [key]: obj.message.replace(/"/g, "") };
+      }),
+    });
   }
   next();
 };
@@ -34,7 +46,13 @@ const validateProjectId = (req, res, next) => {
 
   const { error } = schema.validate(req.params);
   if (error) {
-    return res.status(400).json({ error: error.details[0].message });
+    return res.status(400).json({
+      error: "Invalid data in request json.",
+      message: error.details.map((obj) => {
+        let key = obj.path[0];
+        return { [key]: obj.message.replace(/"/g, "") };
+      }),
+    });
   }
   next();
 };
